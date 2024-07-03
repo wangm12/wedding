@@ -1,0 +1,16 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  --pink: #f8a8d5;
+  --white: #fff;
+
+  /* break points */
+  --bp-small: 390px;
+  --bp-medium: 768px;
+  --bp-large: 1024px;
+
+  margin: 0;
+  padding: 0;
+}

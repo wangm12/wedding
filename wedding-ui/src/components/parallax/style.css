@@ -1,0 +1,82 @@
+.Parallax__Text {
+  margin: 0;
+  position: absolute;
+  right: 10vw;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  color: var(--pink);
+}
+
+.Parallax__Section {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  scroll-snap-align: center;
+  perspective: 500px;
+}
+
+.Parallax__Section > div {
+  position: relative;
+  overflow: hidden;
+  width: 500px;
+  height: 600px;
+  max-height: min(90vh, calc(100vh - 120px));
+  margin: 20px;
+}
+
+.Parallax__Image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+}
+
+.Parallax__Progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  bottom: 150px;
+  background: var(--pink);
+}
+
+/* HEADER */
+.Parallax__Header {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-image: radial-gradient(
+    rgba(0, 0, 0, 0) 1px,
+    white 1px
+  );
+  background-size: 4px 4px;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  -moz-backdrop-filter: blur(3px);
+}
+
+.Parallax__Header > span {
+  color: var(--pink);
+  font-family: input-mono, monospace;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  font-style: normal;
+}

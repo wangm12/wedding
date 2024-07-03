@@ -1,0 +1,51 @@
+.RoundTable_MainTable {
+  fill: rgb(234, 230, 234);
+  stroke-width: 2;
+  stroke: rgb(153, 153, 153);
+  color: rgb(153, 153, 153);
+}
+.RoundTable_MainTable.active {
+  fill: rgb(234, 230, 234);
+  stroke-width: 2;
+  stroke: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+
+.RoundTable_MainTable_Text {
+  font-family: "Schoolbell", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 30px;
+  text-anchor: middle;
+  fill: rgb(153, 153, 153);
+}
+.RoundTable_MainTable_Text.active {
+  fill: rgb(0, 0, 0);
+}
+
+.RoundTable_Seat {
+  stroke: rgb(204, 204, 204);
+  stroke-width: 2.5;
+  fill: rgb(204, 204, 204);
+  fill-opacity: 0.2;
+  stroke-opacity: 1;
+  stroke-linecap: round;
+  stroke-dasharray: 5.2, 5.2;
+}
+.RoundTable_Seat.active {
+  fill: rgb(234, 230, 234);
+  stroke-width: 2;
+  stroke: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+}
+.RoundTable_Seat_Text {
+  font-family: "Schoolbell", cursive;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 15px;
+  text-anchor: middle;
+  fill: rgb(153, 153, 153);
+}
+.RoundTable_Seat_Text.active {
+  fill: rgb(0, 0, 0);
+}
