@@ -1,12 +1,16 @@
 import RoundTable from "../../components/seat-search/round-table";
+import { seatsAssignments } from "../../../public/assets/constants/seats-assignments";
+import { TableParser } from "../../utils/seats/table-parser";
 
 export default function SeatsPage() {
+  const tablesMap = TableParser(seatsAssignments);
+  console.log(tablesMap);
   return (
     <svg
       width="100vw"
       height="100vh"
       viewBox="0 0 800 600"
-      preserveAspectRatio="xMidYMid meet"
+      // preserveAspectRatio="xMidYMid meet"
     >
       <RoundTable
         tableNumber={1}
