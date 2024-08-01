@@ -1,0 +1,44 @@
+.calendar__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "muyao-chinese";
+}
+
+.calendar__container {
+    border-radius: 30px;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    padding: 15px;
+    display: inline-block;
+}
+
+.calendar__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.calendar__container th {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.calendar__container tr {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.calendar__container td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.calendar__active {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-50%);
+}

@@ -1,0 +1,26 @@
+#container {
+  /* Center the text in the viewport. */
+  width: 100vw;
+  height: 70px;
+  top: 0;
+  bottom: 0;
+
+  /* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
+  filter: url(#threshold) blur(0.6px);
+}
+
+/* Your average text styling */
+#text1,
+#text2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+
+  font-family: 'pinru-chinese';
+  font-size: 40px;
+  font-weight: 600;
+
+  text-align: center;
+
+  user-select: none;
+}
