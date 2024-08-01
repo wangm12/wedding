@@ -1,114 +1,111 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import { parentVariants } from "../../animation/transition";
-import { imageVariants, dividerVariants, textVariants } from "./style";
-import TextMask from '../../components/text-mask/index';
-import MainBackGroundImg from '/assets/images/main-background.jpg';
+import MainImg from '/assets/images/home-page/main.png';
+import CustomImage from '../../components/custom-image/custom-image';
+import { transition } from "../../animation/transition";
+import WeddingSchedule from "../../components/wedding-schedule";
+import MorphingText from "../../components/morph-text";
 
 export default function HomePage() {
   return (
-    <motion.div
-      variants={parentVariants}
-      initial="hidden"
+    <motion.div variants={WrapperVariants} initial="hidden"
       whileInView="show"
       exit="exit"
-      viewport={{ once: true }}
-    >
-      <Box
-        sx={{
-          height: "100vh",
-          overflow: "hidden",
-          position: "relative",
-        }}
-      >
-        <Box
-          component={motion.img}
-          alt="Main Background Image"
-          variants={imageVariants}
-          src={MainBackGroundImg}
+      viewport={{ once: true }}>
+      {/* welcome text */}
+      <motion.div variants={TopEnterVariants}>
+        <MorphingText texts={WelcomeTexts} />
+      </motion.div>
+
+      {/* main image */}
+      <CustomImage imageSrc={MainImg} imageAlt="Main Background Image" style={{
+        display: "block",
+        maxWidth: "80vw",
+        margin: "auto",
+      }} />
+
+      {/* divier */}
+      <motion.div variants={DividerVariants} style={{ marginTop: "40px", marginBottom: "40px" }}>
+        <Typography
+          variant="h4"
           sx={{
-            objectFit: "cover",
-            objectPosition: "center",
-            width: "100%",
-            height: "100vh",
-          }}
-        />
-        <Box
-          sx={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            height: "100vh",
-            width: "100%",
-            display: "flex",
-            alignItems: "center",
-            backgroundImage: ({ palette }) => {
-              return `linear-gradient(to bottom, transparent, ${palette.background.default})`;
-            },
+            textAlign: "center",
+            fontFamily: "muyao-chinese",
           }}
         >
-          <Container>
-            <Typography
-              variant="h2"
-              sx={{
-                textAlign: {
-                  md: "left",
-                  xs: "center",
-                },
-                fontSize: {
-                  md: 70,
-                  xs: 45,
-                },
-                textShadow: "3px 3px rgba(60, 42, 33, 0.6)",
-              }}
-            >
-              <TextMask variants={textVariants}>test1234</TextMask>
-            </Typography>
+          婚礼邀请函
+        </Typography>
+        <Typography
+          variant="h4"
+          sx={{
+            textAlign: "center",
+            fontFamily: "AmericanHorrorStory",
+          }}
+        >
+          welcome to our wedding
+        </Typography>
+      </motion.div>
 
-            <Typography
-              variant="h1"
-              sx={{
-                textAlign: {
-                  md: "left",
-                  xs: "center",
-                },
-                fontSize: {
-                  md: "10em",
-                  xs: "6em",
-                },
-                textShadow: "5px 5px rgba(60, 42, 33, 0.6)",
-              }}
-            >
-              test2345
-            </Typography>
+      <WeddingSchedule />
 
-            <Box
-              component={motion.div}
-              variants={dividerVariants}
-              sx={{ borderBottom: 3, borderColor: "divider" }}
-            />
 
-            <Typography
-              variant="h3"
-              component="p"
-              sx={{
-                mt: 2,
-                textAlign: {
-                  md: "left",
-                  xs: "center",
-                },
-                fontSize: {
-                  md: "3em",
-                  xs: "2em",
-                },
-                textShadow: "3px 3px rgba(60, 42, 33, 0.6)",
-              }}
-            >
-              test3456
-            </Typography>
-          </Container>
-        </Box>
-      </Box>
-    </motion.div>
+    </motion.div >
   );
 }
+
+const WelcomeTexts = [
+  "良辰已定，吉日待访",
+  "吾有薄酒，以谢良友",
+]
+
+const WrapperVariants = {
+  hidden: {
+    opacity: 0,
+    overflow: "hidden",
+  },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+  exit: {
+    overflow: "visible",
+    transition: {
+      when: "afterChildren",
+    },
+  },
+};
+
+const TopEnterVariants = {
+  hidden: {
+    y: "-100%",
+    opacity: 0,
+  },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      ease: [0.6, 0.01, 0, 0.95],
+    }
+  },
+  exit: {
+    y: "-150%",
+  },
+};
+
+const DividerVariants = {
+  hidden: {
+    scale: 0.5,
+    opacity: 0,
+  },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition,
+  },
+  exit: {
+    opacity: 0,
+  },
+};

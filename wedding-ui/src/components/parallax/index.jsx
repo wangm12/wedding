@@ -36,11 +36,13 @@ export default function Parallax() {
   });
 
   return (
-    <div className="Parallax_Container">
+    <div>
       <ParallaxHeader />
-      {[1, 2, 3, 4, 5, 6].map((image, index) =>
-        _renderImage({ id: image, key: index })
-      )}
+      <div className="Parallax_Container">
+        {[1, 2, 3, 4, 5, 6].map((image, index) =>
+          _renderImage({ id: image, key: index })
+        )}
+      </div>
       <motion.div className="Parallax__Progress" style={{ scaleX }} />
     </div>
   );

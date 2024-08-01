@@ -1,10 +1,10 @@
 export const transition = {
-  duration: 1.5,
+  duration: 2,
   ease: [0.6, 0.01, 0, 0.95],
 };
 
 export const parentVariants = {
-  hidden: false,
+  hidden: true,
   show: {
     transition: {
       staggerChildren: 0.15,

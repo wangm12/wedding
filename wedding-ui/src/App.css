@@ -2,6 +2,44 @@ html {
   scroll-snap-type: y mandatory;
 }
 
+/* START OF THE FONTS SECTION */
+@font-face {
+  font-family: "AmericanHorrorStory";
+  src: local("AmericanHorrorStory"),
+    url("./fonts/AmericanHorrorStory.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "AmericanHorrorStoryPromo";
+  src: local("AmericanHorrorStoryPromo"),
+    url("./fonts/AmericanHorrorStoryPromo.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Creattion";
+  src: local("Creattion"),
+    url("./fonts/Creattion.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "CoveredByYourGrace";
+  src: local("CoveredByYourGrace"),
+    url("./fonts/CoveredByYourGrace.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "muyao-chinese";
+  src: local("muyao-chinese"),
+    url("./fonts/muyao-chinese.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "pinru-chinese";
+  src: local("pinru-chinese"),
+    url("./fonts/pinru-chinese.ttf") format("truetype");
+}
+/* END OF THE FONTS SECTIONS */
+
 body {
   --pink: #f8a8d5;
   --white: #fff;

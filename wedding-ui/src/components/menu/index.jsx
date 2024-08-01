@@ -21,6 +21,7 @@ const links = [
   },
   {
     title: "Calender",
+    link: "/calendar",
     IconMenu: ({ ...rest }) => <CalendarMonthTwoToneIcon {...rest} />,
   },
   {
@@ -58,6 +59,7 @@ export default function MainMenu() {
         bottom: { md: 20, xs: 15 },
         left: "50%",
         transform: "translateX(-50%)",
+        backgroundColor: "white",
         p: 1,
       }}
     >
