@@ -17,6 +17,7 @@ const links = [
   },
   {
     title: "Heart",
+    link: "/story",
     IconMenu: ({ ...rest }) => <FavoriteTwoToneIcon {...rest} />,
   },
   {
