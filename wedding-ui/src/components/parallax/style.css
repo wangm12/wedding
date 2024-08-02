@@ -1,7 +1,7 @@
 .Parallax__Text {
   margin: 0;
   position: absolute;
-  right: 10vw;
+  right: 10%;
   font-size: 56px;
   font-weight: 700;
   letter-spacing: -3px;
@@ -10,7 +10,7 @@
 }
 
 .Parallax__Section {
-  height: 100vh;
+  height: 95vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -47,6 +47,9 @@
   height: 5px;
   bottom: 150px;
   background: var(--pink);
+
+  max-width: 650px; /* Restrict maximum width */
+  margin: 0 auto;   /* Center horizontally */
 }
 
 /* HEADER */
@@ -56,6 +59,8 @@
   top: 0;
   left: 0;
   right: 0;
+  max-width: 650px; /* Restrict maximum width */
+  margin: 0 auto;   /* Center horizontally */
 
   display: flex;
   justify-content: center;

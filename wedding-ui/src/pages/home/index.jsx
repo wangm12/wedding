@@ -19,8 +19,9 @@ export default function HomePage() {
       {/* main image */}
       <CustomImage imageSrc={MainImg} imageAlt="Main Background Image" style={{
         display: "block",
-        maxWidth: "80vw",
+        maxWidth: "80%",
         margin: "auto",
+        borderRadius: "10px",
       }} />
 
       {/* main paragraph */}
