@@ -38,7 +38,7 @@ function ThemeWrapper({ children }) {
 function App() {
   return (
     <ThemeWrapper>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <MainMenu />
         <MainRouter />
       </BrowserRouter>

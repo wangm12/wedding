@@ -11,7 +11,7 @@ function _renderImage({ id, key }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 50);
-  const imagePath = `/assets/images/gallery/${id}.jpg`;
+  const imagePath = `${process.env.PUBLIC_URL}/assets/images/gallery/${id}.jpg`;
 
   return (
     <section key={key} className="Parallax__Section">
