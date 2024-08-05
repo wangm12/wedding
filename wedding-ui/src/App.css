@@ -57,6 +57,12 @@ html {
     url("./fonts/pinru-chinese.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "ZiHunXianJianQiXiaTi-chinese";
+  src: local("ZiHunXianJianQiXiaTi-chinese"),
+    url("./fonts/ZiHunXianJianQiXiaTi-chinese.ttf") format("truetype");
+}
+
 /* END OF THE FONTS SECTIONS */
 
 body {
