@@ -19,7 +19,7 @@ export default function CalendarPage() {
                     variant="h4"
                     sx={{
                         textAlign: "center",
-                        fontFamily: "ZiHunXianJianQiXiaTi-chinese",
+                        fontFamily: "YeZiGongChangTangYingHei-chinese",
                     }}
                 >
                     婚礼日期
@@ -63,7 +63,7 @@ export default function CalendarPage() {
                     variant="h5"
                     sx={{
                         textAlign: "center",
-                        fontFamily: "ZiHunXianJianQiXiaTi-chinese",
+                        fontFamily: "YeZiGongChangTangYingHei-chinese",
                     }}
                 >
                     农历：八月二十
@@ -81,7 +81,7 @@ export default function CalendarPage() {
                     variant="h5"
                     sx={{
                         textAlign: "center",
-                        fontFamily: "ZiHunXianJianQiXiaTi-chinese",
+                        fontFamily: "YeZiGongChangTangYingHei-chinese",
                     }}
                 >
                     倒计时
@@ -98,6 +98,8 @@ export default function CalendarPage() {
 
                 <CountDown targetDate={SundayTargetDate} />
             </motion.div>
+
+            <div style={{ height: "max(10vh, 150px)" }} />
         </motion.div>
     )
 }

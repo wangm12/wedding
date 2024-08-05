@@ -14,7 +14,9 @@ export default function WeddingSchedule() {
             <motion.div variants={Event1TextVariants} className="event_1">
                 <span className="time">15:08</span>
                 <br />
-                <span className="description">Live Music With Open Bar<br />乐队表演及畅饮</span>
+                <span className="english-description">Live Music With Open Bar</span>
+                <br />
+                <span className="description">乐队表演及畅饮</span>
             </motion.div>
             <motion.div variants={Event1LogoVariants} className="event_1_img">
                 <img src={musicImg} alt="Music" className="icon" />
@@ -23,7 +25,9 @@ export default function WeddingSchedule() {
             <motion.div variants={Event2TextVariants} className="event_2">
                 <span className="time">16:08</span>
                 <br />
-                <span className="description">Ceremony<br />仪式</span>
+                <span className="english-description">Ceremony</span>
+                <br />
+                <span className="description">仪式</span>
             </motion.div>
             <motion.div variants={Event2LogoVariants} className="event_2_img">
                 <img src={ringImg} style={{ maxWith: "100%", maxHeight: "100%" }} alt="Chair" className="icon" />
@@ -32,7 +36,9 @@ export default function WeddingSchedule() {
             <motion.div variants={Event3TextVariants} className="event_3">
                 <span className="time">18:08</span>
                 <br />
-                <span className="description">Wedding Reception<br />婚宴</span>
+                <span className="english-description">Wedding Reception</span>
+                <br />
+                <span className="description">婚宴</span>
             </motion.div>
             <motion.div variants={Evnet3LogoVariants} className="event_3_img">
                 <img src={dinnerImg} alt="Dinner" className="icon" />

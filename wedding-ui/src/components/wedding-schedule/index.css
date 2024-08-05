@@ -3,6 +3,7 @@
     width: 90%;
     height: 600px;
     margin: auto;
+    font-family: "AmericanHorrorStory", "YeZiGongChangTangYingHei-chinese";
 }
 
 .line-container {
@@ -26,7 +27,6 @@
     left: 37%;
     transform: translateX(-50%);
     text-align: end;
-    font-family: "CoveredByYourGrace";
 }
 
 .event_1_img {
@@ -44,7 +44,6 @@
     left: 50%;
     transform: translateX(-50%);
     text-align: start;
-    font-family: "CoveredByYourGrace";
 }
 
 .event_2_img {
@@ -62,7 +61,6 @@
     left: 50%;
     transform: translateX(-75%);
     text-align: end;
-    font-family: "CoveredByYourGrace";
 }
 
 .event_3_img {
@@ -82,6 +80,11 @@
 
 .description {
     font-size: 20px;
+}
+
+.english-description {
+    font-size: 23px;
+    font-weight: 600;
 }
 
 /* 

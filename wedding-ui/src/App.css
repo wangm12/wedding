@@ -63,6 +63,18 @@ html {
     url("./fonts/ZiHunXianJianQiXiaTi-chinese.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "YeZiGongChangDanDanHei-chinese";
+  src: local("YeZiGongChangDanDanHei-chinese"),
+    url("./fonts/YeZiGongChangDanDanHei-chinese.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "YeZiGongChangTangYingHei-chinese";
+  src: local("YeZiGongChangTangYingHei-chinese"),
+    url("./fonts/YeZiGongChangTangYingHei-chinese.ttf") format("truetype");
+}
+
 /* END OF THE FONTS SECTIONS */
 
 body {

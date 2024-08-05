@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: "ZiHunXianJianQiXiaTi-chinese";
+    font-family: "YeZiGongChangTangYingHei-chinese";
 }
 
 .calendar__container {
@@ -20,26 +20,26 @@
 }
 
 .calendar__container th {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     text-align: center;
 }
 
 .calendar__container tr {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     text-align: center;
 }
 
 .calendar__container td {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     text-align: center;
 }
 
 .calendar__active {
     position: absolute;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     transform: translateX(-50%);
 }

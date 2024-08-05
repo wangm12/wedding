@@ -27,32 +27,32 @@ export default function HomePage() {
       {/* main paragraph */}
       <motion.div variants={MainParagraphVariants} className="main__paragraph__container" style={{ marginTop: "20px", textAlign: "center", }}>
         {/* name */}
-        <Typography variant="h4" sx={{ fontFamily: "ZiHunXianJianQiXiaTi-chinese" }}>
+        <Typography variant="h4" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
           王鸣捷 & 高菡璐
         </Typography>
         {/* time */}
-        <Typography variant="h5" sx={{ fontFamily: "ZiHunXianJianQiXiaTi-chinese" }}>
+        <Typography variant="h5" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
           2024/9/22 17:18
           <br />
           农历 八月二十(星期日)
         </Typography>
         {/* location */}
-        <Typography variant="h6" sx={{ marginTop: "10px", fontFamily: "ZiHunXianJianQiXiaTi-chinese" }}>
+        <Typography variant="h6" sx={{ marginTop: "10px", fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
           上海衡山路十二号华邑酒店
         </Typography>
       </motion.div>
 
       {/* divier */}
       <motion.div variants={DividerVariants} style={{ marginTop: "40px", textAlign: "center", }}>
-        <Typography variant="h4" sx={{ fontFamily: "ZiHunXianJianQiXiaTi-chinese" }}>
+        <Typography variant="h4" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
           婚礼邀请函
         </Typography>
-        <Typography variant="h5" sx={{ fontFamily: "AmericanHorrorStory" }}>
+        <Typography variant="h5" sx={{ fontFamily: "AmericanHorrorStory", fontWeight: 600 }}>
           welcome to our wedding
         </Typography>
         <div className="welcome__text__container">
           <img src={quotationImg} alt="Dinner" className="quotation__icon quotation__icon__1" />
-          <Typography variant="subtitle1" sx={{ fontFamily: "ZiHunXianJianQiXiaTi-chinese" }}>
+          <Typography variant="subtitle1" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
             当你看到这份邀请函的时候
             <br />
             说明我们的婚礼已经进入了倒计时
@@ -67,10 +67,10 @@ export default function HomePage() {
 
       {/* wedding schedule */}
       <motion.div variants={DividerVariants} style={{ marginTop: "40px", textAlign: "center", }}>
-        <Typography variant="h4" sx={{ fontFamily: "ZiHunXianJianQiXiaTi-chinese" }}>
+        <Typography variant="h4" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
           婚礼流程
         </Typography>
-        <Typography variant="h5" sx={{ fontFamily: "AmericanHorrorStory" }}>
+        <Typography variant="h5" sx={{ fontFamily: "AmericanHorrorStory", fontWeight: 600 }}>
           Timeline
         </Typography>
         <div style={{ marginTop: "15px" }}>
