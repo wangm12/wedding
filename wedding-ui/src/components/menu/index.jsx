@@ -25,11 +25,11 @@ const links = [
     link: "/calendar",
     IconMenu: ({ ...rest }) => <CalendarMonthTwoToneIcon {...rest} />,
   },
-  {
-    title: "Location",
-    link: "/seats",
-    IconMenu: ({ ...rest }) => <SearchOutlinedIcon {...rest} />,
-  },
+  // {
+  //   title: "Location",
+  //   link: "/seats",
+  //   IconMenu: ({ ...rest }) => <SearchOutlinedIcon {...rest} />,
+  // },
   {
     title: "Gallery",
     link: "/gallery",

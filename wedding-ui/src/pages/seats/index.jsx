@@ -4,7 +4,7 @@ import { TableParser } from "../../utils/seats/table-parser";
 
 export default function SeatsPage() {
   const tablesMap = TableParser(seatsAssignments);
-  console.log(tablesMap);
+  
   return (
     <svg
       width="100%"
