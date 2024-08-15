@@ -13,9 +13,27 @@ function _renderImage({ id, key }) {
   const y = useParallax(scrollYProgress, 50);
   const imagePath = `/assets/images/gallery/${id}.jpg`;
 
+  // onclick will be entering full screen mode, reclick to exit
+  const _handleClick = () => {
+    // exit fullscreen
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+      return;
+    } 
+    // enter fullscreen
+    const elem = ref.current;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) {
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem.msRequestFullscreen();
+    }
+  }
+
   return (
     <section key={key} className="Parallax__Section">
-      <div ref={ref}>
+      <div ref={ref} onClick={_handleClick}>
         <img
           className="Parallax__Image"
           src={imagePath}

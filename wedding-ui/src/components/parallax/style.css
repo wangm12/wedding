@@ -11,6 +11,7 @@
 
 .Parallax__Section {
   height: 95vh;
+  width: 95vw;
   overflow: hidden;
   display: flex;
   justify-content: center;
