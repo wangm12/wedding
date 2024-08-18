@@ -19,7 +19,7 @@ export default function CalendarPage() {
                     variant="h4"
                     sx={{
                         textAlign: "center",
-                        fontFamily: "YeZiGongChangTangYingHei-chinese",
+                        fontFamily: "canger",
                     }}
                 >
                     婚礼日期
@@ -50,10 +50,10 @@ export default function CalendarPage() {
 
             {/* date */}
             <motion.div variants={LeftEnterVariants} style={{ textAlign: "center", marginBottom: "30px" }}>
-                <span style={{ display: "block", fontSize: "1.5rem", fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
+                <span style={{ display: "block", fontSize: "1.5rem", fontFamily: "canger" }}>
                     2024/09/22 17:18
                 </span>
-                <span style={{ display: "block", fontSize: "1.5rem", fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
+                <span style={{ display: "block", fontSize: "1.5rem", fontFamily: "canger" }}>
                     农历：八月二十
                 </span>
 
@@ -69,7 +69,7 @@ export default function CalendarPage() {
                     variant="h5"
                     sx={{
                         textAlign: "center",
-                        fontFamily: "YeZiGongChangTangYingHei-chinese",
+                        fontFamily: "canger",
                     }}
                 >
                     倒计时

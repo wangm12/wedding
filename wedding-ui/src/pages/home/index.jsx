@@ -1,7 +1,8 @@
 import { Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import MainImg from '/assets/images/home-page/main.png';
-import CustomImage from '../../components/custom-image/custom-image';
+import MainImgRight from '/assets/images/home-page/wedding-right.jpg';
+import MainImgLeft from '/assets/images/home-page/wedding-left.jpg';
+import XiImg from '/assets/images/home-page/xi.png';
 import WeddingSchedule from "../../components/wedding-schedule";
 import MorphingText from "../../components/morph-text";
 import quotationImg from '/assets/images/home-page/quotation.svg';
@@ -17,12 +18,11 @@ export default function HomePage() {
       </motion.div>
 
       {/* main image */}
-      <CustomImage imageSrc={MainImg} imageAlt="Main Background Image" style={{
-        display: "block",
-        maxWidth: "80%",
-        margin: "auto",
-        borderRadius: "10px",
-      }} />
+      <div className="main__image__container">
+        <motion.img variants={LeftEngerVariants} src={MainImgLeft} alt="Main Background Left Image" />
+        <motion.img variants={RightEngerVariants} src={MainImgRight} alt="Main Background Right Image" />
+        <motion.img variants={XiEnterVariants} src={XiImg} alt="Xi" className="xi__image" />
+      </div>
 
       {/* main paragraph */}
       <motion.div variants={MainParagraphVariants} className="main__paragraph__container" style={{ marginTop: "20px", textAlign: "center", }}>
@@ -48,7 +48,7 @@ export default function HomePage() {
 
       {/* divier */}
       <motion.div variants={DividerVariants} style={{ marginTop: "40px", textAlign: "center", }}>
-        <Typography variant="h4" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
+        <Typography variant="h4" sx={{ fontFamily: "canger" }}>
           婚礼邀请函
         </Typography>
         <Typography variant="h5" sx={{ fontFamily: "AmericanHorrorStory", fontWeight: 600 }}>
@@ -56,7 +56,7 @@ export default function HomePage() {
         </Typography>
         <div className="welcome__text__container">
           <img src={quotationImg} alt="Dinner" className="quotation__icon quotation__icon__1" />
-          <Typography variant="subtitle1" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
+          <Typography variant="subtitle1" sx={{ fontFamily: "canger" }}>
             当你看到这份邀请函的时候
             <br />
             说明我们的婚礼已经进入了倒计时
@@ -71,7 +71,7 @@ export default function HomePage() {
 
       {/* wedding schedule */}
       <motion.div variants={DividerVariants} style={{ marginTop: "40px", textAlign: "center", }}>
-        <Typography variant="h4" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
+        <Typography variant="h4" sx={{ fontFamily: "canger" }}>
           婚礼流程
         </Typography>
         <Typography variant="h5" sx={{ fontFamily: "AmericanHorrorStory", fontWeight: 600 }}>
@@ -145,6 +145,62 @@ const MainParagraphVariants = {
   },
   exit: {
     opacity: 0,
+  },
+};
+
+const LeftEngerVariants = {
+  hidden: {
+    x: "-100%",
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      ease: [0.6, 0.01, 0, 0.95],
+    }
+  },
+  exit: {
+    x: "-150%",
+  },
+};
+
+const RightEngerVariants = {
+  hidden: {
+    x: "100%",
+    opacity: 0,
+  },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      ease: [0.6, 0.01, 0, 0.95],
+    }
+  },
+  exit: {
+    x: "150%",
+  },
+};
+
+const XiEnterVariants = {
+  hidden: {
+    scale: 0.2,
+    opacity: 0,
+    x: "-50%",
+    y: "-50%",
+  },
+  show: {
+    scale: 1,
+    opacity: 1,
+    transition: {
+      duration: 1.5,
+      ease: [0.6, 0.01, 0, 0.95],
+    }
+  },
+  exit: {
+    scale: 0.2,
   },
 };
 

@@ -28,53 +28,22 @@ html {
 }
 
 @font-face {
-  font-family: "AmericanHorrorStoryPromo";
-  src: local("AmericanHorrorStoryPromo"),
-    url("./fonts/AmericanHorrorStoryPromo.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Creattion";
-  src: local("Creattion"),
-    url("./fonts/Creattion.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "CoveredByYourGrace";
-  src: local("CoveredByYourGrace"),
-    url("./fonts/CoveredByYourGrace.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "muyao-chinese";
-  src: local("muyao-chinese"),
-    url("./fonts/muyao-chinese.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "pinru-chinese";
-  src: local("pinru-chinese"),
-    url("./fonts/pinru-chinese.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "ZiHunXianJianQiXiaTi-chinese";
-  src: local("ZiHunXianJianQiXiaTi-chinese"),
-    url("./fonts/ZiHunXianJianQiXiaTi-chinese.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "YeZiGongChangDanDanHei-chinese";
-  src: local("YeZiGongChangDanDanHei-chinese"),
-    url("./fonts/YeZiGongChangDanDanHei-chinese.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "YeZiGongChangTangYingHei-chinese";
   src: local("YeZiGongChangTangYingHei-chinese"),
     url("./fonts/YeZiGongChangTangYingHei-chinese.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "xiaowei";
+  src: local("xiaowei"),
+    url("./fonts/xiaowei.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "canger";
+  src: local("canger"),
+    url("./fonts/canger.ttf") format("truetype");
+}
 /* END OF THE FONTS SECTIONS */
 
 body {

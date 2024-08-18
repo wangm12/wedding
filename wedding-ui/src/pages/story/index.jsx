@@ -7,7 +7,7 @@ export default function StoryPage() {
 
             {/* title */}
             <motion.div variants={TopEnterVariants} style={{ marginTop: "40px", textAlign: "center", }}>
-                <Typography variant="h4" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
+                <Typography variant="h4" sx={{ fontFamily: "canger" }}>
                     我们的故事
                 </Typography>
                 <Typography variant="h4" sx={{ fontFamily: "AmericanHorrorStory" }}>

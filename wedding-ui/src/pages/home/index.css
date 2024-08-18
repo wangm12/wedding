@@ -9,7 +9,7 @@
 
 .main__paragraph__container .name__text {
     display: block;
-    font-family: "YeZiGongChangTangYingHei-chinese";
+    font-family: "canger";
     font-size: 1.7rem;
     text-align: center;
 }
@@ -18,21 +18,52 @@
     display: block;
     font-family: "AmericanHorrorStory";
     font-size: 1.5rem;
-    font-weight: bold;
     text-align: center;
 }
 
 .main__paragraph__container .time__text {
     display: block;
-    font-family: "YeZiGongChangTangYingHei-chinese";
+    font-family: "canger";
     font-size: 1.3rem;
     text-align: center;
 }
+
 .main__paragraph__container .location__text {
     display: block;
-    font-family: "YeZiGongChangTangYingHei-chinese";
+    font-family: "canger";
     font-size: 1.2rem;
     text-align: center;
+}
+
+.main__image__container {
+    position: relative;
+    margin: auto;
+    display: flex;
+    max-width: 90%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: min(10%, 15px);
+}
+
+.main__image__container img {
+    max-width: 45%;
+}
+
+.main__image__container img:nth-child(1) {
+    border-radius: 15px 0 0 15px;
+}
+
+.main__image__container img:nth-child(2) {
+    border-radius: 0 15px 15px 0;
+}
+
+.xi__image {
+    position: absolute;
+    width: 35%;
+    max-width: 150px;
+    top: 80%;
+    left: 50%;
 }
 
 .welcome__text__container {
