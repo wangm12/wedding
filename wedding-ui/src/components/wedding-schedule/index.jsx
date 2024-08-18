@@ -26,7 +26,7 @@ export default function WeddingSchedule() {
             <motion.div variants={Event2TextVariants} className="event_2">
                 <span className="time">16:28</span>
                 <br />
-                <span className="english-description">Photos & Ice Cream</span>
+                <span className="english-description">Photos</span>
                 <br />
                 <span className="description">迎宾</span>
             </motion.div>
