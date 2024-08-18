@@ -49,28 +49,16 @@ export default function CalendarPage() {
             </motion.div>
 
             {/* date */}
-            <motion.div variants={LeftEnterVariants} style={{ marginBottom: "30px" }}>
-                <Typography
-                    variant="h5"
-                    sx={{
-                        textAlign: "center",
-                        fontFamily: "AmericanHorrorStory",
-                    }}
-                >
+            <motion.div variants={LeftEnterVariants} style={{ textAlign: "center", marginBottom: "30px" }}>
+                <span style={{ display: "block", fontSize: "1.5rem", fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
                     2024/09/22 17:18
-                </Typography>
-                <Typography
-                    variant="h5"
-                    sx={{
-                        textAlign: "center",
-                        fontFamily: "YeZiGongChangTangYingHei-chinese",
-                    }}
-                >
+                </span>
+                <span style={{ display: "block", fontSize: "1.5rem", fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
                     农历：八月二十
-                </Typography>
+                </span>
 
                 {/* calendar */}
-                <div style={{ marginTop: "25px" }}>
+                <div style={{ marginTop: "20px" }}>
                     <Calendar />
                 </div>
             </motion.div>

@@ -5,9 +5,16 @@
     font-family: "YeZiGongChangTangYingHei-chinese";
 }
 
+@media (max-width: 440px) {
+    .calendar__wrapper {
+        /* shrink 10% */
+        transform: scale(0.9);
+    }
+}
+
 .calendar__container {
     border-radius: 30px;
-    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    box-shadow: 20px 20px 60px #d9d9d9, -20px 0px 60px #ffffff;
     padding: 15px;
     display: inline-block;
     font-size: 25px;

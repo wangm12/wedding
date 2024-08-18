@@ -17,7 +17,7 @@ export default function WeddingSchedule() {
                 <br />
                 <span className="english-description">Fun Part</span>
                 <br />
-                <span className="description">天台仪式</span>
+                <span className="description">户外仪式</span>
             </motion.div>
             <motion.div variants={Event1LogoVariants} className="event_1_img">
                 <img src={musicImg} alt="Music" className="icon" />
@@ -28,10 +28,10 @@ export default function WeddingSchedule() {
                 <br />
                 <span className="english-description">Photos & Ice Cream</span>
                 <br />
-                <span className="description">接待(拍照和冰淇淋)</span>
+                <span className="description">迎宾</span>
             </motion.div>
             <motion.div variants={Event2LogoVariants} className="event_2_img">
-                <img src={photoImg} style={{ marginTop: "10%", maxWidth: "80%", maxHeight: "100%" }} alt="Chair" className="icon" />
+                <img src={photoImg} style={{ marginTop: "10%", width: "70%", maxHeight: "100%" }} alt="Chair" className="icon" />
             </motion.div>
 
             <motion.div variants={Event3TextVariants} className="event_3">
@@ -39,7 +39,7 @@ export default function WeddingSchedule() {
                 <br />
                 <span className="english-description">Wedding Reception</span>
                 <br />
-                <span className="description">婚宴</span>
+                <span className="description">晚宴</span>
             </motion.div>
             <motion.div variants={Evnet3LogoVariants} className="event_3_img">
                 <img src={dinnerImg} alt="Dinner" className="icon" />
@@ -130,7 +130,7 @@ const Event2LogoVariants = {
         opacity: 0,
     },
     show: {
-        x: "-100%",
+        x: "-110%",
         opacity: 1,
         transition: {
             delay: 1,

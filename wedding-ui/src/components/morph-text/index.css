@@ -1,7 +1,7 @@
 #container {
   /* Center the text in the viewport. */
   width: 100%;
-  height: 70px;
+  height: 3rem;
   top: 0;
   bottom: 0;
 
@@ -16,9 +16,9 @@
   width: 100%;
   display: inline-block;
 
-  font-family: 'pinru-chinese';
-  font-size: 40px;
-  font-weight: 600;
+  font-family: "AmericanHorrorStory", 'YeZiGongChangTangYingHei-chinese';
+  font-size: 2rem;
+  font-weight: 300;
 
   text-align: center;
 

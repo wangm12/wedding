@@ -7,7 +7,7 @@ const MorphingText = ({
     const text1Ref = useRef(null);
     const text2Ref = useRef(null);
 
-    const morphTime = 2;
+    const morphTime = 1;
     const cooldownTime = 2;
 
     let textIndex = texts.length - 1;

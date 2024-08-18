@@ -27,19 +27,23 @@ export default function HomePage() {
       {/* main paragraph */}
       <motion.div variants={MainParagraphVariants} className="main__paragraph__container" style={{ marginTop: "20px", textAlign: "center", }}>
         {/* name */}
-        <Typography variant="h4" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
+        <span className="name__text">
           王鸣捷 & 高菡璐
-        </Typography>
+        </span>
+        <span className="english__name__text">
+          Mingjie Wang & Hanlu Gao
+        </span>
         {/* time */}
-        <Typography variant="h5" sx={{ fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
+        <span className="time__text">
           2024/9/22 17:18
-          <br />
-          农历 八月二十(星期日)
-        </Typography>
+        </span>
+        <span className="time__text">
+          农历 八月二十
+        </span>
         {/* location */}
-        <Typography variant="h6" sx={{ marginTop: "10px", fontFamily: "YeZiGongChangTangYingHei-chinese" }}>
+        <span className="location__text">
           上海衡山路十二号华邑酒店
-        </Typography>
+        </span>
       </motion.div>
 
       {/* divier */}
@@ -85,6 +89,8 @@ export default function HomePage() {
 const WelcomeTexts = [
   "良辰已定，吉日待访",
   "吾有薄酒，以谢良友",
+  "Welcome to our wedding!",
+  "Grateful for your presence",
 ]
 
 const WrapperVariants = {
