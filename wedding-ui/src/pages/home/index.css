@@ -43,7 +43,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: min(10%, 15px);
+    gap: min(5%, 8px);
 }
 
 .main__image__container img {
@@ -60,9 +60,9 @@
 
 .xi__image {
     position: absolute;
-    width: 35%;
+    width: 30%;
     max-width: 150px;
-    top: 80%;
+    top: 15%;
     left: 50%;
 }
 
