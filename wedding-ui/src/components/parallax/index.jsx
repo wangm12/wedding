@@ -15,21 +15,31 @@ function _renderImage({ id, key }) {
 
   // onclick will be entering full screen mode, reclick to exit
   const _handleClick = () => {
-    // exit fullscreen
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
+    // Exit fullscreen if already in fullscreen mode
+    if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen(); // For Safari
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen(); // For IE/Edge
+      }
       return;
-    } 
-    // enter fullscreen
+    }
+
+    // Enter fullscreen
     const elem = ref.current;
     if (elem.requestFullscreen) {
       elem.requestFullscreen();
     } else if (elem.webkitRequestFullscreen) {
-      elem.webkitRequestFullscreen();
+      elem.webkitRequestFullscreen(); // For Safari
     } else if (elem.msRequestFullscreen) {
-      elem.msRequestFullscreen();
+      elem.msRequestFullscreen(); // For IE/Edge
+    } else if (elem.mozRequestFullScreen) {
+      elem.mozRequestFullScreen(); // For older Firefox versions
     }
-  }
+  };
+
 
   return (
     <section key={key} className="Parallax__Section">
