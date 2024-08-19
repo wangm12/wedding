@@ -1,11 +1,11 @@
 .Parallax__Text {
   margin: 0;
   position: absolute;
+  top: 15%;
   right: 10%;
-  font-size: 56px;
-  font-weight: 700;
+  font-size: 1.5rem;
   letter-spacing: -3px;
-  line-height: 1.2;
+  font-family: 'canger';
   color: var(--pink);
 }
 
@@ -47,7 +47,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  bottom: 150px;
+  bottom: min(12vh, 100px);
   background: var(--pink);
 
   max-width: 650px; /* Restrict maximum width */
@@ -76,12 +76,9 @@
   -moz-backdrop-filter: blur(3px);
 }
 
-.Parallax__Header>span {
+.Parallax__Header span {
   color: var(--pink);
-  font-family: input-mono, monospace;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: -3px;
-  line-height: 1.2;
-  font-style: normal;
+  font-family: "AmericanHorrorStory", 'canger';
+  font-size: 1.4rem;
+  line-height: 2rem;
 }

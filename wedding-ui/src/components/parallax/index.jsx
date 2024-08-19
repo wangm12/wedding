@@ -1,70 +1,43 @@
-import React, { useCallback, useRef } from "react";
-import QuickPinchZoom, { make3dTransformValue } from "react-quick-pinch-zoom";
+import { useRef } from "react";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import "./style.css";
 import ParallaxHeader from './header';
+
+const ImagesNumber = 27;
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
+// always keep 2 digits
+function _renderImageIndex(id) {
+  return id < 10 ? `0${id}` : `${id}`;
+}
+
 function _renderImage({ id, key }) {
   const ref = useRef(null);
-  const imgRef = useRef();
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 50);
   const imagePath = `/assets/images/gallery/${id}.jpg`;
 
-  // onclick will be entering full screen mode, reclick to exit
-  const _handleClick = () => {
-    // Exit fullscreen if already in fullscreen mode
-    if (document.fullscreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        document.webkitExitFullscreen(); // For Safari
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen(); // For IE/Edge
-      }
-      return;
-    }
-
-    // Enter fullscreen
-    const elem = ref.current;
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.webkitRequestFullscreen) {
-      elem.webkitRequestFullscreen(); // For Safari
-    } else if (elem.msRequestFullscreen) {
-      elem.msRequestFullscreen(); // For IE/Edge
-    } else if (elem.mozRequestFullScreen) {
-      elem.mozRequestFullScreen(); // For older Firefox versions
-    }
-  };
-
-  const onUpdate = useCallback(({ x, y, scale }) => {
-    const { current: img } = imgRef;
-
-    if (img) {
-      const value = make3dTransformValue({ x, y, scale });
-
-      img.style.setProperty("transform", value);
-    }
-  }, []);
-
 
   return (
     <section key={key} className="Parallax__Section">
-      <div ref={ref} onClick={_handleClick}>
-        <QuickPinchZoom onUpdate={onUpdate}>
-          <img ref={imgRef}
-            className="Parallax__Image"
-            src={imagePath} />
-        </QuickPinchZoom>
+      <div ref={ref}>
+        <img
+          loading="lazy" 
+          className="Parallax__Image"
+          src={imagePath}
+        />
       </div>
-      <motion.h2 className="Parallax__Text" style={{ y }}>{`#00${id}`}</motion.h2>
+      <motion.h2 className="Parallax__Text" style={{ y }}>{`${_renderImageIndex(id)} / ${ImagesNumber}`}</motion.h2>
     </section>
   );
+}
+
+function _renderImages() {
+  const images = Array.from({ length: ImagesNumber }, (_, i) => i + 1);
+  return images.map((image, index) => _renderImage({ id: image, key: index }));
 }
 
 export default function Parallax() {
@@ -79,9 +52,7 @@ export default function Parallax() {
     <div>
       <ParallaxHeader />
       <div className="Parallax_Container">
-        {[1, 2, 3, 4, 5, 6].map((image, index) =>
-          _renderImage({ id: image, key: index })
-        )}
+        {_renderImages()}
       </div>
       <motion.div className="Parallax__Progress" style={{ scaleX }} />
     </div>

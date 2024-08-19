@@ -15,11 +15,11 @@ const links = [
     link: "/",
     IconMenu: ({ ...rest }) => <HomeTwoToneIcon {...rest} />,
   },
-  {
-    title: "Heart",
-    link: "/story",
-    IconMenu: ({ ...rest }) => <FavoriteTwoToneIcon {...rest} />,
-  },
+  // {
+  //   title: "Heart",
+  //   link: "/story",
+  //   IconMenu: ({ ...rest }) => <FavoriteTwoToneIcon {...rest} />,
+  // },
   {
     title: "Calender",
     link: "/calendar",
