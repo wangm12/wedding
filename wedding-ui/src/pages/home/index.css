@@ -67,6 +67,7 @@
 }
 
 .welcome__text__container {
+    position: relative;
     margin: 20px auto;
     padding: 15px;
     width: 80%;
@@ -82,11 +83,11 @@
 }
 
 .quotation__icon__1 {
-    left: 10%;
+    left: 0;
     transform: translate(0, -75%);
 }
 
 .quotation__icon__2 {
-    right: 10%;
+    right: 0;
     transform: translate(0, -25%) rotate(180deg);
 }
