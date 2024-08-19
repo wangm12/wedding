@@ -1,4 +1,5 @@
-import { useRef } from "react";
+import React, { useCallback, useRef } from "react";
+import QuickPinchZoom, { make3dTransformValue } from "react-quick-pinch-zoom";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import "./style.css";
 import ParallaxHeader from './header';
@@ -9,6 +10,7 @@ function useParallax(value, distance) {
 
 function _renderImage({ id, key }) {
   const ref = useRef(null);
+  const imgRef = useRef();
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 50);
   const imagePath = `/assets/images/gallery/${id}.jpg`;
@@ -40,15 +42,25 @@ function _renderImage({ id, key }) {
     }
   };
 
+  const onUpdate = useCallback(({ x, y, scale }) => {
+    const { current: img } = imgRef;
+
+    if (img) {
+      const value = make3dTransformValue({ x, y, scale });
+
+      img.style.setProperty("transform", value);
+    }
+  }, []);
+
 
   return (
     <section key={key} className="Parallax__Section">
       <div ref={ref} onClick={_handleClick}>
-        <img
-          className="Parallax__Image"
-          src={imagePath}
-          alt="A London skyscraper"
-        />
+        <QuickPinchZoom onUpdate={onUpdate}>
+          <img ref={imgRef}
+            className="Parallax__Image"
+            src={imagePath} />
+        </QuickPinchZoom>
       </div>
       <motion.h2 className="Parallax__Text" style={{ y }}>{`#00${id}`}</motion.h2>
     </section>
