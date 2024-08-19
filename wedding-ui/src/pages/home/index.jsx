@@ -87,9 +87,9 @@ export default function HomePage() {
 }
 
 const WelcomeTexts = [
-  "良辰已定，吉日待访",
-  "吾有薄酒，以谢良友",
-  "Welcome to our wedding!",
+  "良辰已定 吉日待访",
+  "吾有薄酒 以谢良友",
+  "Welcome to our wedding",
   "Grateful for your presence",
 ]
 

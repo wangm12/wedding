@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import RedFingerprint from '/assets/images/red-fingerprint.png';
 import "./index.css";
 
@@ -8,9 +9,9 @@ export default function Calendar() {
                 <table>
                     <thead>
                         <tr>
-                            <th className="calendar__title" colSpan="7">Sep 2024</th>
+                            <th colSpan="7">Sep 2024</th>
                         </tr>
-                        <tr>
+                        <tr className="calendar__week__title">
                             <th>Sun</th>
                             <th>Mon</th>
                             <th>Tue</th>
@@ -50,7 +51,7 @@ export default function Calendar() {
                         </tr>
                         <tr>
                             <div>
-                                <img className="calendar__active" src={RedFingerprint} alt="red-fingerprint" />
+                                <motion.img variants={HeartImageVariants} className="calendar__active" src={RedFingerprint} alt="red-fingerprint" />
                                 <td>22</td>
                             </div>
                             <td>23</td>
@@ -75,3 +76,23 @@ export default function Calendar() {
         </div >
     );
 }
+
+const HeartImageVariants = {
+    hidden: {
+      scale: 0.2,
+      x: "-50%",
+    },
+    show: {
+      scale: [0.2, 1.5, 1], // Keyframes for scale
+      x: "-50%",
+      transition: {
+        duration: 1.5, // Total duration of the animation
+        ease: [0.6, 0.01, 0, 0.95],
+        times: [0, 0.5, 1], // Define when each scale value should occur during the transition
+      },
+    },
+    exit: {
+      opacity: 0,
+    },
+  };
+  

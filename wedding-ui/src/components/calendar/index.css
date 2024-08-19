@@ -5,48 +5,42 @@
     font-family: "canger";
 }
 
-@media (max-width: 440px) {
-    .calendar__wrapper {
-        /* shrink 10% */
-        transform: scale(0.9);
-    }
-}
-
 .calendar__container {
     border-radius: 30px;
     box-shadow: 20px 20px 60px #d9d9d9, -20px 0px 60px #ffffff;
     padding: 15px;
     display: inline-block;
-    font-size: 25px;
+    font-size: 1.2rem;
 }
 
-.calendar__title {
-    font-size: 35px;
-    font-weight: bold;
-    margin-bottom: 10px;
+.calendar__week__title {
+    font-size: 1rem;
+}
+
+.calendar__container tbody {
+    font-size: 1rem;
 }
 
 .calendar__container th {
-    width: 40px;
-    height: 40px;
     text-align: center;
+    width: 1.8rem;
+    height: 1.8rem;
 }
 
 .calendar__container tr {
-    width: 40px;
-    height: 40px;
+    width: 1.8rem;
+    height: 1.8rem;
     text-align: center;
 }
 
 .calendar__container td {
-    width: 40px;
-    height: 40px;
+    width: 1.8rem;
+    height: 1.8rem;
     text-align: center;
 }
 
 .calendar__active {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    transform: translateX(-50%);
+    width: 1.8rem;
+    height: 1.8rem;
 }
