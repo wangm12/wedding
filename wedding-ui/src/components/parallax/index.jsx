@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import "./style.css";
 import ParallaxHeader from './header';
 
-const ImagesNumber = 27;
+const ImagesNumber = 10;
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -18,7 +18,7 @@ function _renderImage({ id, key }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 50);
-  const imagePath = `/assets/images/gallery/${id}.jpg`;
+  const imagePath = `/assets/images/gallery/wedding-${id}.jpg`;
 
 
   return (
