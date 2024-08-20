@@ -25,12 +25,14 @@ function _renderImage({ id, key }) {
     <section key={key} className="Parallax__Section">
       <div ref={ref}>
         <img
-          loading="lazy" 
+          loading="lazy"
           className="Parallax__Image"
           src={imagePath}
         />
+        <motion.div className="Parallax__Text" style={{ y }}>
+          {`${_renderImageIndex(id)}/${ImagesNumber}`}
+        </motion.div>
       </div>
-      <motion.h2 className="Parallax__Text" style={{ y }}>{`${_renderImageIndex(id)} / ${ImagesNumber}`}</motion.h2>
     </section>
   );
 }
