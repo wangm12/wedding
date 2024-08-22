@@ -3,7 +3,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import "./style.css";
 import ParallaxHeader from './header';
 
-const ImagesNumber = 10;
+const ImagesNumber = 16;
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
