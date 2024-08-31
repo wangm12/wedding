@@ -35,7 +35,7 @@ export default function HomePage() {
         </span>
         {/* time */}
         <span className="time__text">
-          2024/9/22 17:18
+          2024/9/22 16:28
         </span>
         <span className="time__text">
           农历 八月二十
